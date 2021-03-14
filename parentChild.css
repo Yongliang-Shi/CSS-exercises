@@ -1,0 +1,14 @@
+/* Any paragraph in the div */
+div > p {
+    background-color: yellow;
+}
+
+/* Any paragraph in the span */
+span > p {
+    background-color: navajowhite;
+}
+
+/* Any header2 in the div */
+div > h2 {
+    background-color: olive;
+}
