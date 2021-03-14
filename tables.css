@@ -1,0 +1,19 @@
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse; /* whether table borders should collapse into a single border or be seperated */
+}
+
+th {
+    padding: 20px;
+    background-color: white;
+}
+
+td {
+    background-color:#D7F7FA;
+}
+
+/* Add hover selector */
+/* Make sure to add a space between tr and colon, or it does not work */
+tr :hover {
+    background-color: yellow;
+}
