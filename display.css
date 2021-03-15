@@ -1,0 +1,11 @@
+#inlineblock {
+    background-color: yellow;
+    display: inline-block;
+    height: 100px;
+}
+
+#block {
+    background-color: yellow;
+    display: block;
+    height: 100px;
+}
