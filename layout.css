@@ -1,12 +1,14 @@
+/* Include padding and border in the element's total width and heigth */
 * {
     box-sizing: border-box;
   }
 
+/* Remove the defaulted margin */
 body {
-    margin:0; /*Remove the default margin*/
+    margin:0; 
 }
 
-/* Define a class named header to style the header */
+/* Style all elements with class="header" */
 .header {
     background-color: gray; /*By itsefl, the background color will NOT cover the defaulted top and bottom margin of the block-level element*/
     text-align: center;
@@ -15,30 +17,72 @@ body {
 }
 
 /* Style the top navigation bar */
+/* .class: select all elements with class="topnav" */
 .topnav {
     background-color: yellowgreen;
     border: 1px solid black;
     overflow: hidden;
 }
 
+/* Style the topnav links */
+/* .class element: select all <a> elements inside the elements with class="topnav" */
 .topnav a {
     border: 1px solid purple;
     text-decoration: none; /* Remove the underline created by <a> */
     color:#f2f2f2; /* Specify the text color*/
     display: block; /* Convert to block-level elements */
+    float: left;
     padding: 15px 15px; /* Inline elements don't have top and bottom paddings */
     text-align: center;
-    float: left;
 }
 
+/* Change color on hover */
+/* .class a:hover: select links when you mouse over it */
 .topnav a:hover {
     background-color: #ddd;
     color:black;
 }
 
-/* Create three equal columns that floats next to each other*/
-.column {
+/* Create three equal columns that floats next to each other */
+/* .class - select all elements with class="column" */
+/* .column {
     width: 33.33%;
     float: left;
     padding: 15px;
+} */
+
+/* .class - select all element with class="column" */
+.column {
+    border: 1px solid black;
+    float: left;
+    padding: 10px;
+}
+
+/* Style left and right column */
+/* .class1.class2 - select all elements with both "column" and "side" within its class attribute*/
+.column.side {
+    width: 25%;
+}
+
+/* Style middle column */
+/* .class1.class2 - select all elements with both "column" and "middle" within its class attribute*/
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+/*
+.row:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+*/
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* @media mediatype mediafeatures {CSS-Code;} */
+@media screen and (max-width:600px) {
+    .column.middle {
+        width:100%;
+    }
 }
