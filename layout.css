@@ -71,18 +71,28 @@ body {
 }
 
 /* Clear floats after the columns */
-/*
-.row:after {
+/* .class::after or .class:after - inserts something after the content of each selected element(s) */
+.row::after {
     content:"";
-    display:table;
-    clear:both;
+    display: table;
+    clear: both;
 }
-*/
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 /* @media mediatype mediafeatures {CSS-Code;} */
+/* .class1.class2, .class1.class2 - select all elements with both "column" and "side", "column" and "middle" withtin its class attribute */
 @media screen and (max-width:600px) {
-    .column.middle {
+    .column.column.side, .column.middle {
         width:100%;
     }
+}
+
+/* Style the footer */
+/* .class - select all the elements with class="footer" */
+.footer {
+    border: 1px solid black;
+    background-color: gray;
+    text-align: center;
+    
 }
